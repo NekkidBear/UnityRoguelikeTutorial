@@ -70,6 +70,7 @@
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
     <Compile Include="Assets/Scripts/Loader.cs" />
     <Compile Include="Assets/_Complete-Game/Scripts/Enemy.cs" />
+    <Compile Include="Assets/Scripts/Player.cs" />
     <Compile Include="Assets/Scripts/GameManager.cs" />
     <Compile Include="Assets/_Complete-Game/Scripts/Player.cs" />
     <Compile Include="Assets/_Complete-Game/Scripts/GameManager.cs" />
