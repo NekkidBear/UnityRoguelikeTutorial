@@ -20,6 +20,8 @@ using UnityEngine.SceneManagement;        //Allows us to use SceneManager
         private Animator animator;
         //Used to store player food points total during level.
         private int food;
+        //Used to validate if player is moving
+        private bool isMoving;
 
         
         //Start overrides the Start function of MovingObject
