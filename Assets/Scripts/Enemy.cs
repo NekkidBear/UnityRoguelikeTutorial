@@ -13,6 +13,7 @@ public class Enemy : MovingObject
     // Start is called before the first frame update
     protected override void Start()
     {
+        GameManager.instance.AddEnemytoList(this);
         animator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         base.Start();
@@ -44,6 +45,7 @@ public class Enemy : MovingObject
     protected override void OnCantMove<T>(T component)
     {
         Player hitPlayer = component as Player;
+        animator.SetTrigger("enemyAttack");
         hitPlayer.LoseFood(playerDamage);
     }
 }
