@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;       //Allows up to use scene Loaded events
 using UnityEngine.UI;                    //Allows us to use UI.
 using Assets.Scripts;
 
-    public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour
     {
         //Time to wait before starting level, int seconds.
         public float levelStartDelay = 2f;
@@ -33,6 +33,7 @@ using Assets.Scripts;
         //Boolean to check if we're setting up board, prevent Player from moving during setup.
         private bool doingSetup = true;
 
+        public UIManager uiManager;
 
         //Awake is always called before any Start functions
         void Awake()
@@ -122,6 +123,8 @@ using Assets.Scripts;
 
             //Set doingSetup to false allowing player to move again.
             doingSetup = false;
+
+            uiManager.HideLevelScreen();
         }
 
         //Update is called every frame.

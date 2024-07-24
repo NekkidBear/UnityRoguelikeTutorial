@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Fonts/OFL.txt" />
+    <None Include="Assets/UI Toolkit/LevelImage.uxml" />
     <None Include="Assets/TutorialInfo/Fonts/LICENSE.txt" />
   </ItemGroup>
   <ItemGroup>
