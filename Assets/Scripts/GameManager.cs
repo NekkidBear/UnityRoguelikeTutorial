@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;        //Allows us to use Lists. 
+using UnityEngine.SceneManagement;       //Allows up to use scene Loaded events
 using UnityEngine.UI;                    //Allows us to use UI.
 using Assets.Scripts;
 
@@ -62,12 +63,25 @@ using Assets.Scripts;
         }
 
         //This is called each time a scene is loaded.
-        void OnLevelWasLoaded(int index)
+        void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
         {
-            //Add one to our level number.
+            //Add one level to our level number
             level++;
-            //Call InitGame to initialize our level.
+            //Call InitGame to initialize our level
             InitGame();
+        }
+
+        void OnEnable()
+        {
+            // Tell our 'OnLevelFinishedLoading' function to start listening for a scene change event as soon as this script is enabled.
+            SceneManager.sceneLoaded += OnLevelFinishedLoading;
+        }
+
+        void OnDisable()
+        {
+            //Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change event as soon as this script is disabled.
+            //Remember to always have an unsubscription for every delegate you subscribeto!
+            SceneManager.sceneLoaded -= OnLevelFinishedLoading;
         }
 
         //Initializes the game for each level.
