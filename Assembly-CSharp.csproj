@@ -78,6 +78,7 @@
     <Compile Include="Assets/_Complete-Game/Scripts/BoardManager.cs" />
     <Compile Include="Assets/Scripts/Wall.cs" />
     <Compile Include="Assets/_Complete-Game/Scripts/Wall.cs" />
+    <Compile Include="Assets/Scripts/UIManager.cs" />
     <Compile Include="Assets/_Complete-Game/Scripts/SoundManager.cs" />
     <Compile Include="Assets/Scripts/MovingObject.cs" />
     <Compile Include="Assets/Scripts/BoardManager.cs" />
